@@ -237,13 +237,31 @@ h1, h2, h3, .navbar-brand, .nav-link, .btn {
 }
 
 /* Estilo de las fotos del carrusel */
+/* Busca esta parte en tu CSS y reemplázala */
+
 .testimonial-img {
-    width: 280px; /* Ancho fijo para que se vean uniformes */
+    width: 200px; /* Antes era 280px. Esto es para PC */
     height: auto;
-    border-radius: 15px;
-    margin: 0 15px; /* Espacio entre fotos */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    border: 1px solid #333;
+    border-radius: 12px;
+    margin: 0 10px; /* Menos espacio entre fotos */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border: 1px solid #ddd;
+    transition: transform 0.3s;
+}
+
+/* Opcional: Si pasas el mouse, que se agrande un poquito para leer */
+.testimonial-img:hover {
+    transform: scale(1.1);
+    z-index: 10;
+    border-color: black;
+}
+
+/* AJUSTE PARA CELULAR (Más chicas aún) */
+@media (max-width: 768px) {
+    .testimonial-img {
+        width: 140px; /* Antes era 220px. Tamaño ideal para ver 2 o 3 en pantalla */
+        margin: 0 5px;
+    }
 }
 
 /* Pause la animación si pasas el mouse por encima (opcional, queda muy pro) */
