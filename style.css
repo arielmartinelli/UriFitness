@@ -215,3 +215,54 @@ h1, h2, h3, .navbar-brand, .nav-link, .btn {
         height: 250px; /* Tarjetas más chicas en celular */
     }
 }
+
+/* --- NUEVO: CARRUSEL INFINITO (MARQUEE) --- */
+.marquee-wrapper {
+    overflow: hidden; /* Oculta lo que se sale de la pantalla */
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+}
+
+.marquee-content {
+    display: flex;
+    width: max-content; /* El ancho se ajusta al contenido */
+    animation: scroll 30s linear infinite; /* 30 segundos una vuelta completa, ajusta si quieres más rápido */
+}
+
+/* La animación que mueve la cinta */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Se mueve hasta la mitad (donde se repiten las fotos) */
+}
+
+/* Estilo de las fotos del carrusel */
+.testimonial-img {
+    width: 280px; /* Ancho fijo para que se vean uniformes */
+    height: auto;
+    border-radius: 15px;
+    margin: 0 15px; /* Espacio entre fotos */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border: 1px solid #333;
+}
+
+/* Pause la animación si pasas el mouse por encima (opcional, queda muy pro) */
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+
+/* --- AJUSTE CERTIFICACIONES MÓVIL --- */
+/* En pantallas chicas (menos de 768px) */
+@media (max-width: 768px) {
+    .cert-small img {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: 350px; /* Pero que no se haga gigante exagerado */
+        margin: 0 auto; /* Centrado */
+        display: block;
+    }
+    
+    /* Para el carrusel en móvil, hacemos las fotos un poco más chicas */
+    .testimonial-img {
+        width: 220px;
+    }
+}
