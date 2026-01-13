@@ -259,28 +259,28 @@ h1, h2, h3, .navbar-brand, .nav-link, .btn {
 /* AJUSTE PARA CELULAR (Más chicas aún) */
 @media (max-width: 768px) {
     .testimonial-img {
-        width: 140px; /* Antes era 220px. Tamaño ideal para ver 2 o 3 en pantalla */
-        margin: 0 5px;
+        /* 1. Ancho: Casi todo el ancho del celular (85%) */
+        width: 85vw !important; 
+        
+        /* 2. Alto: Controlado para que no sea gigante (ej. 350px) */
+        height: 350px !important; 
+        
+        /* 3. Magia: La imagen se ajusta adentro sin cortarse ni deformarse */
+        object-fit: contain; 
+        
+        /* 4. Estética: Fondo negro para rellenar los espacios vacíos a los lados */
+        background-color: #121212; 
+        
+        /* Separación entre tarjetas */
+        margin: 0 10px; 
     }
 }
 
-/* Pause la animación si pasas el mouse por encima (opcional, queda muy pro) */
-.marquee-content:hover {
-    animation-play-state: paused;
-}
-
-/* --- AJUSTE CERTIFICACIONES MÓVIL --- */
-/* En pantallas chicas (menos de 768px) */
-@media (max-width: 768px) {
-    .cert-small img {
-        width: 100%; /* Ocupa todo el ancho disponible */
-        max-width: 350px; /* Pero que no se haga gigante exagerado */
-        margin: 0 auto; /* Centrado */
-        display: block;
-    }
-    
-    /* Para el carrusel en móvil, hacemos las fotos un poco más chicas */
+/* En PC se mantienen sutiles */
+@media (min-width: 769px) {
     .testimonial-img {
-        width: 220px;
+        height: 400px; /* Altura fija en PC */
+        width: auto;   /* El ancho se ajusta solo */
+        object-fit: cover;
     }
 }
