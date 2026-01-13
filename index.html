@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UH Fitness Coach</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.jpeg" alt="UH Fitness Coach" height="100" class="d-inline-block align-text-top me-2">
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars text-silver"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center text-uppercase">
+                    <li class="nav-item"><a class="nav-link" href="#metodo">Método</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resultados">Resultados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificaciones">Certificaciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-mobile d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold text-uppercase mb-3">Forja tu <br><span class="text-silver">Legado</span></h1>
+            <p class="lead mb-4 text-light">Entrenamiento personalizado de alto rendimiento.</p>
+            <div class="d-grid gap-2 d-md-block">
+                <a href="#contacto" class="btn btn-silver btn-lg shadow-glow">AGENDAR ENTREVISTA</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="metodo" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">MI SISTEMA</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-box"><i class="fas fa-dumbbell"></i></div>
+                        <h3>Musculación</h3>
+                        <p>Programas de hipertrofia y fuerza basados en evidencia.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="feature-card active">
+                        <div class="icon-box"><i class="fas fa-trophy"></i></div>
+                        <h3>Alto Rendimiento</h3>
+                        <p>Lleva tu físico al siguiente nivel competitivo.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="feature-card">
+                        <div class="icon-box"><i class="fas fa-brain"></i></div>
+                        <h3>Mentalidad</h3>
+                        <p>Coaching para desarrollar disciplina de acero.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resultados" class="py-5 bg-black text-white">
+        <div class="container">
+            <h2 class="text-center section-title mb-5">TRANSFORMACIONES</h2>
+            <p class="text-center text-secondary mb-4 small"><i class="fas fa-hand-pointer"></i> TOCA LAS FOTOS PARA VER EL CAMBIO</p>
+            
+            <div class="row g-4">
+                <div class="col-6 col-lg-3">
+                    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="img/trf2.jpeg" alt="Antes">
+                                <div class="badge-overlay">ANTES</div>
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="img/trf1.jpeg" alt="Después">
+                                <div class="back-content">
+                                    <h4>Uriel</h4>
+                                    <p class="text-primary fw-bold">-10KG GRASA</p>
+                                    <p class="small">"El plan de alimentación fue clave."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="img/trf3.jpeg" alt="Antes">
+                                <div class="badge-overlay">ANTES</div>
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="img/trf4.jpeg" alt="Después">
+                                <div class="back-content">
+                                    <h4>Pancho</h4>
+                                    <p class="text-primary fw-bold">Recontruccion corporal</p>
+                                    <p class="small">"Aumenté masa muscular en 3 meses."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="img/trf5.jpeg" alt="Antes">
+                                <div class="badge-overlay">ANTES</div>
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="img/trf6.jpeg" alt="Después">
+                                <div class="back-content">
+                                    <h4>Linda</h4>
+                                    <p class="text-primary fw-bold">DEFINICIÓN</p>
+                                    <p class="small">"Mis abdominales salieron a la luz."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="img/trf7.jpeg" alt="Antes">
+                                <div class="badge-overlay">ANTES</div>
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="img/trf8.jpeg" alt="Después">
+                                <div class="back-content">
+                                    <h4>Ariel</h4>
+                                    <p class="text-primary fw-bold">Hipertrofia</p>
+                                    <p class="small">"Ahora me veo bien."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resenas" class="py-5 bg-silver-light text-black">
+        <div class="container">
+            <h2 class="text-center section-title text-black mb-5" style="border-color: black;">LO QUE DICEN ELLOS</h2>
+            
+            <div id="carouselResenas" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <div class="d-flex justify-content-center">
+                            <img src="img/reseña1.jpeg" class="d-block w-50 testimonial-img shadow" alt="Reseña 1">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="d-flex justify-content-center">
+                            <img src="img/reseña2.jpeg" class="d-block w-50 testimonial-img shadow" alt="Reseña 2">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="d-flex justify-content-center">
+                            <img src="img/reseña3.jpeg" class="d-block w-50 testimonial-img shadow" alt="Reseña 3">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="d-flex justify-content-center">
+                            <img src="img/reseña4.jpeg" class="d-block w-50 testimonial-img shadow" alt="Reseña 4">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="d-flex justify-content-center">
+                            <img src="img/reseña5.jpeg" class="d-block w-50 testimonial-img shadow" alt="Reseña 5">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="d-flex justify-content-center">
+                            <img src="img/reseña6.jpeg" class="d-block w-50 testimonial-img shadow" alt="Reseña 6">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="d-flex justify-content-center">
+                            <img src="img/reseña1.jpeg" class="d-block w-50 testimonial-img shadow" alt="Reseña 7">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="d-flex justify-content-center">
+                            <img src="img/reseña3.jpeg" class="d-block w-50 testimonial-img shadow" alt="Reseña 8">
+                        </div>
+                    </div>
+
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselResenas" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-black rounded-circle p-3" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselResenas" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-black rounded-circle p-3" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificaciones" class="py-5 bg-silver-light text-black">
+        <div class="container">
+            <h2 class="text-center section-title text-black mb-5" style="border-color: #000;">FORMACIÓN Y CERTIFICACIONES</h2>
+            
+            
+
+            <div class="row g-3 justify-content-center">
+                <div class="col-4 col-md-4">
+                    <div class="cert-small shadow">
+                        <img src="img/certificacion1.jpeg" class="img-fluid rounded" alt="Certificación">
+                    </div>
+                </div>
+                <div class="col-4 col-md-4">
+                    <div class="cert-small shadow">
+                        <img src="img/certificacion2.jpeg" class="img-fluid rounded" alt="Certificación">
+                    </div>
+                </div>
+                <div class="col-4 col-md-4">
+                    <div class="cert-small shadow">
+                        <img src="img/certificacion3.jpeg" class="img-fluid rounded" alt="Certificación">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-5">
+        <div class="container text-center">
+            <h2 class="section-title mb-4">CONTACTO</h2>
+            <p class="mb-5">¿Listo para comprometerte con tu mejor versión?</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <a href="https://wa.me/549XXXXXXXXX" class="btn btn-whatsapp btn-lg w-100 py-3 shadow-glow mb-4">
+                        <i class="fab fa-whatsapp fa-2x me-3"></i> <span class="h4 m-0 align-middle">HABLAR POR WHATSAPP</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center border-top border-secondary bg-black">
+        <div class="mb-3">
+             <img src="ruta/a/tu/logo-uh.png" alt="UH Logo Footer" height="40">
+        </div>
+        <p class="text-silver small">&copy; 2024 SILVER COACH | PREMIUM TRAINING</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

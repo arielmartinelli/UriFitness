@@ -1,0 +1,217 @@
+:root {
+    --silver: #C0C0C0;
+    --silver-dark: #8E8E8E;
+    --black-pure: #000000;
+    --black-soft: #121212;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .navbar-brand, .nav-link, .btn {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+}
+
+.text-silver { color: var(--silver); }
+/* Fondo claro para la sección de certificaciones */
+.bg-silver-light { background-color: #e6e6e6; }
+
+/* Navbar adjustments */
+.navbar-brand img {
+    transition: transform 0.3s;
+}
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}
+.nav-link { font-size: 1.1rem; }
+
+/* Hero Mobile First */
+.hero-mobile {
+    min-height: 75vh;
+    /* Usé una foto de gimnasio oscura que combine con el logo */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), 
+                url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid var(--silver-dark);
+}
+
+/* Cards Estilo Plateado */
+.feature-card {
+    background: var(--black-soft);
+    padding: 30px;
+    border-radius: 0px; /* Bordes rectos para estilo más "rudo" */
+    border: 1px solid #333;
+    text-align: center;
+    transition: 0.3s;
+    height: 100%;
+}
+
+.feature-card.active, .feature-card:hover {
+    border-color: var(--silver);
+    box-shadow: 0 0 25px rgba(192, 192, 192, 0.15);
+}
+
+.icon-box {
+    font-size: 3rem;
+    color: var(--silver);
+    margin-bottom: 20px;
+}
+
+/* Estilos para Certificaciones */
+.cert-main img {
+    border: 4px solid var(--black-pure);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.cert-small {
+    transition: transform 0.3s ease;
+}
+.cert-small img {
+    border: 2px solid var(--black-pure);
+}
+.cert-small:hover {
+    transform: translateY(-5px);
+    z-index: 2;
+}
+
+/* Botones */
+.btn-silver {
+    background: linear-gradient(145deg, #ffffff, #a1a1a1);
+    color: black;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    background: linear-gradient(to right, #25D366, #128C7E);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-whatsapp:hover {
+    color: white;
+    transform: scale(1.02);
+}
+
+/* Títulos con línea lateral */
+.section-title {
+    font-size: 2.5rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--silver);
+}
+
+/* Sombra de brillo */
+.shadow-glow {
+    box-shadow: 0 0 20px rgba(192, 192, 192, 0.4);
+}
+
+/* Ajustes para celular */
+@media (max-width: 768px) {
+    .display-3 { font-size: 3rem; }
+    section { padding: 50px 0; }
+    /* En celular, los 3 certificados pequeños se verán un poco más grandes */
+    .cert-small img { margin-bottom: 10px; }
+}
+
+/* --- ESTILOS FLIP CARD (3D) --- */
+.flip-card {
+    background-color: transparent;
+    height: 350px; /* Altura de la tarjeta */
+    perspective: 1000px; /* Necesario para el efecto 3D */
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Esta clase se agrega con JS al hacer click */
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+/* Estilo del Frente (Antes) */
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%); /* Efecto blanco y negro para el 'antes' */
+}
+
+.badge-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-family: 'Bebas Neue';
+    letter-spacing: 1px;
+}
+
+/* Estilo del Dorso (Después) */
+.flip-card-back {
+    background-color: var(--black-soft);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back img {
+    width: 100%;
+    height: 100%; /* Ocupa toda la tarjeta */
+    object-fit: cover;
+    opacity: 0.4; /* Imagen oscurecida para leer texto */
+}
+
+.back-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+/* --- ESTILOS CARRUSEL RESEÑAS --- */
+.testimonial-img {
+    border-radius: 15px;
+    border: 2px solid var(--black-pure);
+    /* En móvil ocupa más ancho, en PC menos */
+    max-height: 500px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .testimonial-img {
+        width: 85% !important; /* En celular se ve más grande */
+    }
+    .flip-card {
+        height: 250px; /* Tarjetas más chicas en celular */
+    }
+}
